@@ -9,6 +9,12 @@ pipeline {
                     url: 'https://github.com/LikhithMG/jenkins_demo1.git'
             }
         }
+         stage('Run Python Script') {
+            steps {
+                sh 'python3 --version'
+                sh 'python3 bin.py'
+            }
+
 
         stage('Run Script') {
             steps {
@@ -16,6 +22,6 @@ pipeline {
                 sh './script.sh'
             }
         }
-
+       
     }
 }
